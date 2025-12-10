@@ -7,7 +7,7 @@ import Card from '../components/Card';
 import './Auth.css';
 
 /**
- * Signup Page - Request OTP for email verification
+ * Signup Page - Direct signup (OTP verification temporarily disabled)
  */
 const Signup = () => {
     const [name, setName] = useState('');
@@ -24,7 +24,8 @@ const Signup = () => {
         setLoading(true);
 
         try {
-            const response = await fetch('https://tempx-back.onrender.com/auth/signup/request-otp', {
+            // Direct signup without OTP verification
+            const response = await fetch('https://tempx-back.onrender.com/auth/signup', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -35,10 +36,14 @@ const Signup = () => {
             const data = await response.json();
 
             if (response.ok && data.success) {
-                // Navigate to OTP verification page
-                navigate('/signup/verify-otp', { state: { email, password, name } });
+                // Store token and user data
+                localStorage.setItem('token', data.data.token);
+                localStorage.setItem('user', JSON.stringify(data.data.user));
+
+                // Navigate to inbox
+                navigate('/inbox');
             } else {
-                setError(data.message || 'Failed to send verification code. Please try again.');
+                setError(data.message || 'Failed to create account. Please try again.');
             }
         } catch (error) {
             console.error('Signup error:', error);
@@ -120,7 +125,7 @@ const Signup = () => {
                             fullWidth
                             loading={loading}
                         >
-                            Continue
+                            Create Account
                         </Button>
                     </motion.form>
 
