@@ -8,11 +8,11 @@ export default defineConfig({
         port: 5173,
         proxy: {
             '/auth': {
-                target: 'http://localhost:5000',
+                target: 'https://tempx-back.onrender.com/',
                 changeOrigin: true
             },
             '/email': {
-                target: 'http://localhost:5000',
+                target: 'https://tempx-back.onrender.com/',
                 changeOrigin: true
             }
         }

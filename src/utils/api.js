@@ -5,7 +5,7 @@ import axios from 'axios';
  * Automatically includes JWT token in requests
  */
 const api = axios.create({
-    baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5000',
+    baseURL: import.meta.env.VITE_API_URL || 'https://tempx-back.onrender.com/',
     headers: {
         'Content-Type': 'application/json'
     }

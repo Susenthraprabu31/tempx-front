@@ -78,7 +78,7 @@ const Footer = () => {
 
         try {
             // Call backend API
-            const response = await fetch('http://localhost:5000/newsletter/subscribe', {
+            const response = await fetch('https://tempx-back.onrender.com//newsletter/subscribe', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
