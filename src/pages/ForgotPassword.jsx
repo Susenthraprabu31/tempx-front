@@ -37,7 +37,7 @@ const ForgotPassword = () => {
         setLoading(true);
 
         try {
-            const response = await fetch('https://tempx-back.onrender.com//auth/forgot-password', {
+            const response = await fetch('https://tempx-back.onrender.com/auth/forgot-password', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

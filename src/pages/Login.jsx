@@ -36,7 +36,7 @@ const Login = () => {
     };
 
     const handleGoogleLogin = () => {
-        window.location.href = 'https://tempx-back.onrender.com//auth/google';
+        window.location.href = 'https://tempx-back.onrender.com/auth/google';
     };
 
     return (

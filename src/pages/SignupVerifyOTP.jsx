@@ -75,7 +75,7 @@ const SignupVerifyOTP = () => {
         setLoading(true);
 
         try {
-            const response = await fetch('https://tempx-back.onrender.com//auth/signup/verify-otp', {
+            const response = await fetch('https://tempx-back.onrender.com/auth/signup/verify-otp', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -115,7 +115,7 @@ const SignupVerifyOTP = () => {
         setSuccess('');
 
         try {
-            const response = await fetch('https://tempx-back.onrender.com//auth/signup/request-otp', {
+            const response = await fetch('https://tempx-back.onrender.com/auth/signup/request-otp', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
