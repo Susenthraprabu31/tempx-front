@@ -40,9 +40,9 @@
 }
 
 .compose-success {
-    background: rgba(16, 185, 129, 0.1);
-    border: 1px solid var(--color-success);
-    color: var(--color-success);
+    background: rgba(79, 124, 255, 0.1);
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
     padding: var(--spacing-md);
     border-radius: var(--radius-md);
     margin-bottom: var(--spacing-lg);
@@ -81,13 +81,13 @@
 }
 
 .compose-select:hover {
-    border-color: rgba(16, 185, 129, 0.3);
+    border-color: rgba(79, 124, 255, 0.4);
 }
 
 .compose-select:focus {
     outline: none;
-    border-color: var(--color-success);
-    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(79, 124, 255, 0.15);
 }
 
 .compose-textarea {
@@ -105,13 +105,13 @@
 }
 
 .compose-textarea:hover {
-    border-color: rgba(16, 185, 129, 0.3);
+    border-color: rgba(79, 124, 255, 0.4);
 }
 
 .compose-textarea:focus {
     outline: none;
-    border-color: var(--color-success);
-    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(79, 124, 255, 0.15);
 }
 
 .compose-textarea::placeholder {
@@ -142,8 +142,8 @@
 
 /* AI Composer Section */
 .ai-composer-section {
-    background: linear-gradient(135deg, rgba(16, 185, 129, 0.05), rgba(59, 130, 246, 0.05));
-    border: 1px solid rgba(16, 185, 129, 0.2);
+    background: linear-gradient(135deg, rgba(79, 124, 255, 0.08), rgba(92, 124, 250, 0.08));
+    border: 1px solid rgba(79, 124, 255, 0.3);
     border-radius: var(--radius-lg);
     padding: var(--spacing-lg);
     margin: var(--spacing-lg) 0;
@@ -178,7 +178,7 @@
 }
 
 .ai-badge {
-    background: linear-gradient(135deg, #10b981, #3b82f6);
+    background: linear-gradient(135deg, #4f7cff, #5c7cfa);
     color: white;
     font-size: 10px;
     font-weight: 700;
@@ -226,13 +226,13 @@
 }
 
 .ai-prompt-input:hover {
-    border-color: rgba(16, 185, 129, 0.4);
+    border-color: rgba(79, 124, 255, 0.5);
 }
 
 .ai-prompt-input:focus {
     outline: none;
-    border-color: var(--color-success);
-    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(79, 124, 255, 0.15);
 }
 
 .ai-prompt-input::placeholder {
@@ -242,7 +242,7 @@
 .ai-generate-btn {
     white-space: nowrap;
     min-width: 140px;
-    background: linear-gradient(135deg, #10b981, #059669) !important;
+    background: linear-gradient(135deg, #4f7cff, #3b5bdb) !important;
     position: relative;
     overflow: hidden;
 }

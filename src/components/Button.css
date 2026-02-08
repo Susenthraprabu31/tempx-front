@@ -73,7 +73,7 @@
 }
 
 .btn-ghost:hover:not(:disabled) {
-    background: rgba(99, 102, 241, 0.1);
+    background: rgba(79, 124, 255, 0.1);
     border-color: var(--color-primary);
 }
 

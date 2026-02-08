@@ -1,0 +1,101 @@
+/* Login Character Component Styles */
+
+.login-character-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: var(--spacing-xl);
+    animation: characterEntrance 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes characterEntrance {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.login-character {
+    filter: drop-shadow(0 4px 12px rgba(79, 124, 255, 0.3));
+    transition: transform 0.3s ease;
+}
+
+.login-character:hover {
+    transform: scale(1.05);
+}
+
+/* Character Head */
+.character-head {
+    transition: all 0.3s ease;
+}
+
+/* Eyes */
+.character-eyes {
+    transition: opacity 0.3s ease;
+}
+
+.character-eyes.covered {
+    opacity: 0;
+}
+
+.eye-white {
+    transition: all 0.2s ease;
+}
+
+.eye-pupil {
+    transition: all 0.2s ease-out;
+}
+
+/* Hands */
+.character-hands {
+    transition: all 0.3s ease-in-out;
+}
+
+.hand {
+    transition: all 0.3s ease-in-out;
+    transform-origin: center;
+}
+
+/* Default position - hands at sides */
+.character-hands:not(.covering) .hand-left {
+    transform: translate(-15px, 20px);
+    opacity: 0.3;
+}
+
+.character-hands:not(.covering) .hand-right {
+    transform: translate(15px, 20px);
+    opacity: 0.3;
+}
+
+/* Covering position - hands over eyes */
+.character-hands.covering .hand-left {
+    transform: translate(15px, 0);
+    opacity: 1;
+}
+
+.character-hands.covering .hand-right {
+    transform: translate(-15px, 0);
+    opacity: 1;
+}
+
+/* Mouth */
+.character-mouth {
+    transition: all 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .login-character-container {
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .login-character {
+        width: 100px;
+        height: 100px;
+    }
+}

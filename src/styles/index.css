@@ -11,27 +11,27 @@
 }
 
 :root {
-  /* Color Palette - Dark Theme */
-  --color-bg-primary: #000000;
-  --color-bg-secondary: #0a0a0a;
-  --color-bg-tertiary: #1a1a1a;
+  /* Color Palette - Blue Theme */
+  --color-bg-primary: #0a0e27;
+  --color-bg-secondary: #141937;
+  --color-bg-tertiary: #1e2447;
 
   /* Glassmorphism backgrounds */
-  --color-glass-bg: rgba(26, 26, 26, 0.6);
-  --color-glass-border: rgba(255, 255, 255, 0.1);
+  --color-glass-bg: rgba(30, 36, 71, 0.6);
+  --color-glass-border: rgba(79, 124, 255, 0.2);
 
   /* Accent colors */
-  --color-primary: #6366f1;
-  --color-primary-hover: #4f46e5;
-  --color-primary-light: #818cf8;
+  --color-primary: #4f7cff;
+  --color-primary-hover: #3b5bdb;
+  --color-primary-light: #748ffc;
 
-  --color-secondary: #8b5cf6;
-  --color-accent: #ec4899;
+  --color-secondary: #5c7cfa;
+  --color-accent: #4f7cff;
 
   /* Gradients */
-  --gradient-primary: linear-gradient(135deg, #10b981 0%, #059669 100%);
-  --gradient-accent: linear-gradient(135deg, #ec4899 0%, #f43f5e 100%);
-  --gradient-success: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  --gradient-primary: linear-gradient(135deg, #4f7cff 0%, #3b5bdb 100%);
+  --gradient-accent: linear-gradient(135deg, #5c7cfa 0%, #4f7cff 100%);
+  --gradient-success: linear-gradient(135deg, #4f7cff 0%, #3b5bdb 100%);
 
   /* Text colors */
   --color-text-primary: #f9fafb;
@@ -49,7 +49,7 @@
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6);
-  --shadow-glow: 0 0 20px rgba(16, 185, 129, 0.4);
+  --shadow-glow: 0 0 20px rgba(79, 124, 255, 0.4);
 
   /* Spacing */
   --spacing-xs: 0.25rem;
@@ -100,7 +100,7 @@ body {
   position: relative;
 }
 
-/* Enhanced Animated background - matching footer design */
+/* Enhanced Animated background - Blue theme with diagonal overlay */
 body::before {
   content: '';
   position: fixed;
@@ -109,11 +109,12 @@ body::before {
   width: 100%;
   height: 100%;
   background:
-    radial-gradient(circle at 20% 50%, rgba(16, 185, 129, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(5, 150, 105, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 50% 20%, rgba(16, 185, 129, 0.08) 0%, transparent 40%),
-    radial-gradient(circle at 70% 40%, rgba(16, 185, 129, 0.06) 0%, transparent 45%),
-    radial-gradient(circle at 30% 80%, rgba(5, 150, 105, 0.08) 0%, transparent 50%);
+    linear-gradient(135deg, rgba(79, 124, 255, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 20% 50%, rgba(79, 124, 255, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(59, 91, 219, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 50% 20%, rgba(92, 124, 250, 0.1) 0%, transparent 40%),
+    radial-gradient(circle at 70% 40%, rgba(79, 124, 255, 0.06) 0%, transparent 45%),
+    radial-gradient(circle at 30% 80%, rgba(59, 91, 219, 0.08) 0%, transparent 50%);
   pointer-events: none;
   z-index: -1;
   animation: backgroundPulse 10s ease-in-out infinite;
@@ -142,8 +143,8 @@ body::after {
   width: 100%;
   height: 100%;
   background-image:
-    linear-gradient(rgba(16, 185, 129, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(16, 185, 129, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(79, 124, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(79, 124, 255, 0.03) 1px, transparent 1px);
   background-size: 50px 50px;
   pointer-events: none;
   z-index: -1;
@@ -262,7 +263,7 @@ a:hover {
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.3), transparent);
+  background: linear-gradient(90deg, transparent, rgba(79, 124, 255, 0.4), transparent);
   opacity: 0.5;
 }
 

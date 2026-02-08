@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Input from '../components/Input';
 import Button from '../components/Button';
 import Card from '../components/Card';
+import ShinyText from '../components/ShinyText';
 import './Auth.css';
 
 /**
@@ -68,7 +69,9 @@ const Signup = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2, duration: 0.5 }}
                     >
-                        <h1 className="gradient-text">Get Started</h1>
+                        <h1 className="gradient-text">
+                            <ShinyText>Get Started</ShinyText>
+                        </h1>
                         <p>Create your account to start using TempMailX</p>
                     </motion.div>
 

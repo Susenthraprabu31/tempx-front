@@ -20,8 +20,8 @@
 
 .auth-card:hover {
     transform: scale(1.02);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7), 0 0 40px rgba(16, 185, 129, 0.25);
-    border-color: rgba(16, 185, 129, 0.4);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7), 0 0 40px rgba(79, 124, 255, 0.3);
+    border-color: rgba(79, 124, 255, 0.5);
 }
 
 .auth-header {
@@ -143,8 +143,8 @@
 
 .otp-input:focus {
     outline: none;
-    border-color: var(--color-success);
-    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(79, 124, 255, 0.2);
     transform: scale(1.05);
 }
 
@@ -219,9 +219,9 @@
 }
 
 .alert-success {
-    background: rgba(16, 185, 129, 0.1);
-    border: 1px solid var(--color-success);
-    color: var(--color-success);
+    background: rgba(79, 124, 255, 0.1);
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
 }
 
 /* Link Button */
@@ -265,6 +265,153 @@
     font-weight: 600;
 }
 
+/* ============================================
+   INTERACTIVE LOGIN FORM STYLES
+   ============================================ */
+
+/* Floating Label Input Group */
+.floating-input-group {
+    position: relative;
+    margin-bottom: var(--spacing-lg);
+}
+
+.floating-input {
+    width: 100%;
+    padding: var(--spacing-lg) var(--spacing-md);
+    padding-top: calc(var(--spacing-lg) + 8px);
+    background: rgba(20, 25, 55, 0.6);
+    backdrop-filter: blur(12px);
+    border: 2px solid var(--color-glass-border);
+    border-radius: var(--radius-lg);
+    color: var(--color-text-primary);
+    font-size: var(--font-size-base);
+    font-family: var(--font-family);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
+}
+
+.floating-input::placeholder {
+    color: transparent;
+}
+
+.floating-input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(79, 124, 255, 0.15);
+    background: rgba(20, 25, 55, 0.8);
+}
+
+/* Autofill styles to prevent white background */
+.floating-input:-webkit-autofill,
+.floating-input:-webkit-autofill:hover,
+.floating-input:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--color-text-primary);
+    -webkit-box-shadow: 0 0 0 1000px rgba(20, 25, 55, 0.8) inset;
+    box-shadow: 0 0 0 3px rgba(79, 124, 255, 0.15);
+    border-color: var(--color-primary);
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.floating-label {
+    position: absolute;
+    left: var(--spacing-md);
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-text-muted);
+    font-size: var(--font-size-base);
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: transparent;
+    padding: 0 4px;
+}
+
+/* Floating label active state */
+.floating-input:focus+.floating-label,
+.floating-input:not(:placeholder-shown)+.floating-label {
+    top: 8px;
+    transform: translateY(0) scale(0.85);
+    color: var(--color-primary);
+    font-weight: 600;
+    background: linear-gradient(to bottom, transparent 0%, transparent 30%, rgba(20, 25, 55, 0.9) 30%, rgba(20, 25, 55, 0.9) 70%, transparent 70%, transparent 100%);
+    padding: 0 6px;
+}
+
+/* Password Toggle Button for Floating Input */
+.floating-input-group .password-toggle-btn {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    opacity: 0.6;
+    transition: all var(--transition-fast);
+    z-index: 10;
+    padding: 8px;
+    border-radius: var(--radius-md);
+}
+
+.floating-input-group .password-toggle-btn:hover {
+    opacity: 1;
+    background: rgba(79, 124, 255, 0.1);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.floating-input-group .password-toggle-btn:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+/* Interactive Login Card */
+.interactive-login {
+    overflow: visible;
+}
+
+/* Shake Animation */
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-8px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(8px);
+    }
+}
+
+.shake {
+    animation: shake 0.5s ease-in-out;
+}
+
+/* Enhanced Error Message Animation */
+.auth-error {
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 @media (max-width: 480px) {
     .auth-card {
         padding: var(--spacing-xl);
@@ -278,5 +425,15 @@
         width: 45px;
         height: 55px;
         font-size: var(--font-size-xl);
+    }
+
+    .floating-input {
+        padding: var(--spacing-md);
+        padding-top: calc(var(--spacing-md) + 8px);
+        font-size: var(--font-size-sm);
+    }
+
+    .floating-label {
+        font-size: var(--font-size-sm);
     }
 }

@@ -29,12 +29,12 @@
     0%,
     100% {
         opacity: 0.6;
-        box-shadow: 0 0 10px rgba(16, 185, 129, 0.4);
+        box-shadow: 0 0 10px rgba(79, 124, 255, 0.4);
     }
 
     50% {
         opacity: 1;
-        box-shadow: 0 0 20px rgba(16, 185, 129, 0.8);
+        box-shadow: 0 0 20px rgba(79, 124, 255, 0.8);
     }
 }
 
@@ -46,9 +46,9 @@
     width: 100%;
     height: 100%;
     background:
-        radial-gradient(circle at 20% 50%, rgba(16, 185, 129, 0.15) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(5, 150, 105, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 50% 20%, rgba(16, 185, 129, 0.08) 0%, transparent 40%);
+        radial-gradient(circle at 20% 50%, rgba(79, 124, 255, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(59, 91, 219, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 50% 20%, rgba(79, 124, 255, 0.08) 0%, transparent 40%);
     animation: gradientShift 10s ease-in-out infinite;
     pointer-events: none;
 }
@@ -99,7 +99,7 @@
 
 .footer-brand:hover {
     background: rgba(26, 26, 26, 0.5);
-    border-color: rgba(16, 185, 129, 0.2);
+    border-color: rgba(79, 124, 255, 0.3);
     transform: translateY(-2px);
 }
 
@@ -131,8 +131,8 @@
     gap: 6px;
     cursor: pointer;
     padding: var(--spacing-sm) var(--spacing-md);
-    background: rgba(16, 185, 129, 0.05);
-    border: 1px solid rgba(16, 185, 129, 0.15);
+    background: rgba(79, 124, 255, 0.08);
+    border: 1px solid rgba(79, 124, 255, 0.2);
     border-radius: var(--radius-md);
     min-width: 80px;
     text-align: center;
@@ -140,8 +140,8 @@
 }
 
 .stat-item:hover {
-    background: rgba(16, 185, 129, 0.1);
-    border-color: rgba(16, 185, 129, 0.3);
+    background: rgba(79, 124, 255, 0.15);
+    border-color: rgba(79, 124, 255, 0.4);
 }
 
 .stat-number {
@@ -173,7 +173,7 @@
 
 .footer-links:hover {
     background: rgba(26, 26, 26, 0.5);
-    border-color: rgba(16, 185, 129, 0.2);
+    border-color: rgba(79, 124, 255, 0.3);
     transform: translateY(-2px);
 }
 
@@ -203,12 +203,12 @@
     background: var(--gradient-primary);
     border-radius: 2px;
     transition: width var(--transition-base);
-    box-shadow: 0 0 10px rgba(16, 185, 129, 0.3);
+    box-shadow: 0 0 10px rgba(79, 124, 255, 0.4);
 }
 
 .footer-heading:hover::after {
     width: 60px;
-    box-shadow: 0 0 15px rgba(16, 185, 129, 0.5);
+    box-shadow: 0 0 15px rgba(79, 124, 255, 0.6);
 }
 
 .footer-list {
@@ -263,7 +263,7 @@
 
 .footer-newsletter:hover {
     background: rgba(26, 26, 26, 0.5);
-    border-color: rgba(16, 185, 129, 0.2);
+    border-color: rgba(79, 124, 255, 0.3);
     transform: translateY(-2px);
 }
 
@@ -293,9 +293,9 @@
 
 .newsletter-input:focus {
     outline: none;
-    border-color: var(--color-success);
+    border-color: var(--color-primary);
     background: rgba(26, 26, 26, 0.8);
-    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15), 0 4px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 0 3px rgba(79, 124, 255, 0.2), 0 4px 12px rgba(0, 0, 0, 0.3);
     transform: translateY(-1px);
 }
 
@@ -314,7 +314,7 @@
     font-family: var(--font-family);
     cursor: pointer;
     transition: all var(--transition-base);
-    box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);
+    box-shadow: 0 4px 14px rgba(79, 124, 255, 0.4);
     position: relative;
     overflow: hidden;
 }
@@ -335,13 +335,13 @@
 }
 
 .newsletter-button:hover {
-    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.5);
+    box-shadow: 0 6px 20px rgba(79, 124, 255, 0.6);
     transform: translateY(-3px);
 }
 
 .newsletter-button:active {
     transform: translateY(-1px);
-    box-shadow: 0 3px 10px rgba(16, 185, 129, 0.4);
+    box-shadow: 0 3px 10px rgba(79, 124, 255, 0.5);
 }
 
 /* Newsletter Messages */
@@ -355,9 +355,9 @@
 }
 
 .newsletter-message.success {
-    background: rgba(16, 185, 129, 0.15);
-    border: 1px solid rgba(16, 185, 129, 0.3);
-    color: var(--color-success);
+    background: rgba(79, 124, 255, 0.15);
+    border: 1px solid rgba(79, 124, 255, 0.3);
+    color: var(--color-primary);
 }
 
 .newsletter-message.error {
@@ -476,11 +476,11 @@
 
     0%,
     100% {
-        box-shadow: 0 0 10px rgba(16, 185, 129, 0.6);
+        box-shadow: 0 0 10px rgba(79, 124, 255, 0.6);
     }
 
     50% {
-        box-shadow: 0 0 25px rgba(16, 185, 129, 1);
+        box-shadow: 0 0 25px rgba(79, 124, 255, 1);
     }
 }
 
@@ -550,7 +550,7 @@
 .social-link:focus-visible,
 .newsletter-input:focus-visible,
 .newsletter-button:focus-visible {
-    outline: 2px solid var(--color-success);
+    outline: 2px solid var(--color-primary);
     outline-offset: 2px;
 }
 
