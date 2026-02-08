@@ -9,6 +9,7 @@
         "preview": "vite preview"
     },
     "dependencies": {
+        "@supabase/supabase-js": "^2.95.3",
         "axios": "^1.6.2",
         "framer-motion": "^10.16.16",
         "prop-types": "^15.8.1",
