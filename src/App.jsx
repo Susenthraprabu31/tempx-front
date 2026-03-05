@@ -15,13 +15,20 @@ import Inbox from './pages/Inbox';
 import Outbox from './pages/Outbox';
 import Compose from './pages/Compose';
 import EmailReader from './pages/EmailReader';
+import UnderConstruction from './pages/UnderConstruction';
 import './styles/index.css';
+
+const IS_UNDER_CONSTRUCTION = true;
 
 /**
  * Main App Component
  * Handles routing and context providers
  */
 function App() {
+    if (IS_UNDER_CONSTRUCTION) {
+        return <UnderConstruction />;
+    }
+
     return (
         <AuthProvider>
             <EmailProvider>
