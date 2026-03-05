@@ -3,11 +3,10 @@ import { AuthProvider } from './context/AuthContext';
 import { EmailProvider } from './context/EmailContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import ProtectedRoute from './components/ProtectedRoute';
 import Landing from './pages/Landing';
-import Login from './pages/Login';
-import Signup from './pages/Signup';
-import SignupVerifyOTP from './pages/SignupVerifyOTP';
+// import Login from './pages/Login';
+// import Signup from './pages/Signup';
+// import SignupVerifyOTP from './pages/SignupVerifyOTP';
 import ForgotPassword from './pages/ForgotPassword';
 import VerifyOTP from './pages/VerifyOTP';
 import ResetPassword from './pages/ResetPassword';
@@ -31,54 +30,19 @@ function App() {
                     <Routes>
                         {/* Public Routes */}
                         <Route path="/" element={<Landing />} />
-                        <Route path="/login" element={<Login />} />
-                        <Route path="/signup" element={<Signup />} />
-                        <Route path="/signup/verify-otp" element={<SignupVerifyOTP />} />
+                        {/* <Route path="/login" element={<Login />} /> */}
+                        {/* <Route path="/signup" element={<Signup />} /> */}
+                        {/* <Route path="/signup/verify-otp" element={<SignupVerifyOTP />} /> */}
                         <Route path="/forgot-password" element={<ForgotPassword />} />
                         <Route path="/verify-otp" element={<VerifyOTP />} />
                         <Route path="/reset-password" element={<ResetPassword />} />
 
-                        {/* Protected Routes */}
-                        <Route
-                            path="/dashboard"
-                            element={
-                                <ProtectedRoute>
-                                    <Dashboard />
-                                </ProtectedRoute>
-                            }
-                        />
-                        <Route
-                            path="/inbox"
-                            element={
-                                <ProtectedRoute>
-                                    <Inbox />
-                                </ProtectedRoute>
-                            }
-                        />
-                        <Route
-                            path="/outbox"
-                            element={
-                                <ProtectedRoute>
-                                    <Outbox />
-                                </ProtectedRoute>
-                            }
-                        />
-                        <Route
-                            path="/compose"
-                            element={
-                                <ProtectedRoute>
-                                    <Compose />
-                                </ProtectedRoute>
-                            }
-                        />
-                        <Route
-                            path="/email/:id"
-                            element={
-                                <ProtectedRoute>
-                                    <EmailReader />
-                                </ProtectedRoute>
-                            }
-                        />
+                        {/* App routes (public since login/signup disabled) */}
+                        <Route path="/dashboard" element={<Dashboard />} />
+                        <Route path="/inbox" element={<Inbox />} />
+                        <Route path="/outbox" element={<Outbox />} />
+                        <Route path="/compose" element={<Compose />} />
+                        <Route path="/email/:id" element={<EmailReader />} />
 
                         {/* Catch all - redirect to home */}
                         <Route path="*" element={<Navigate to="/" replace />} />

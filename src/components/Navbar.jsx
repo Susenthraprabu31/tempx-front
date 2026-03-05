@@ -12,7 +12,7 @@ const Navbar = () => {
 
     const handleLogout = () => {
         logout();
-        navigate('/login');
+        navigate('/'); // login commented out: was navigate('/login');
     };
 
     return (
@@ -23,21 +23,19 @@ const Navbar = () => {
                 </Link>
 
                 <div className="navbar-menu">
+                    <Link to="/dashboard" className="navbar-link">Dashboard</Link>
+                    <Link to="/inbox" className="navbar-link">Inbox</Link>
+                    <Link to="/outbox" className="navbar-link">Outbox</Link>
+                    <Link to="/compose" className="navbar-link">Compose</Link>
                     {isAuthenticated && (
-                        <>
-                            <Link to="/dashboard" className="navbar-link">Dashboard</Link>
-                            <Link to="/inbox" className="navbar-link">Inbox</Link>
-                            <Link to="/outbox" className="navbar-link">Outbox</Link>
-                            <Link to="/compose" className="navbar-link">Compose</Link>
-                            <Button
-                                variant="primary"
-                                size="sm"
-                                onClick={handleLogout}
-                                className="logout-btn"
-                            >
-                                Logout
-                            </Button>
-                        </>
+                        <Button
+                            variant="primary"
+                            size="sm"
+                            onClick={handleLogout}
+                            className="logout-btn"
+                        >
+                            Logout
+                        </Button>
                     )}
                 </div>
             </div>

@@ -29,7 +29,7 @@ const Landing = () => {
                     </p>
 
                     <div className="hero-cta">
-                        <Link to="/signup">
+                        {/* <Link to="/signup">
                             <Button variant="primary" size="lg">
                                 Get Started Free
                             </Button>
@@ -38,7 +38,7 @@ const Landing = () => {
                             <Button variant="secondary" size="lg">
                                 Login
                             </Button>
-                        </Link>
+                        </Link> */}
                     </div>
                 </motion.div>
             </section>
@@ -139,11 +139,11 @@ const Landing = () => {
                 >
                     <h2>Ready to protect your privacy?</h2>
                     <p>Join thousands of users who trust TempMailX for secure communication</p>
-                    <Link to="/signup">
+                    {/* <Link to="/signup">
                         <Button variant="primary" size="lg">
                             Create Free Account
                         </Button>
-                    </Link>
+                    </Link> */}
                 </motion.div>
             </section>
         </div>
